@@ -1,16 +1,18 @@
-package com.ferbajoo.amplemindproject
+package com.ferbajoo.amplemindproject.feature
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.ferbajoo.amplemindproject.R
+import com.ferbajoo.amplemindproject.core.base.BaseFragment
 
 /**
  * A simple [Fragment] subclass.
  */
-class NextFragment : Fragment() {
+class NextFragment : BaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

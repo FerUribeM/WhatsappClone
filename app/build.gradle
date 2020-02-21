@@ -34,8 +34,11 @@ dependencies {
     implementation project(Modules.presentation)
 
     implementation Libraries.kotlin
-    implementation SupportLibraries.appcompat
     implementation Libraries.ktx
+    implementation Libraries.koinAndroid
+    implementation Libraries.koinViewModel
+
+    implementation SupportLibraries.appcompat
     implementation SupportLibraries.constraintlayout
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

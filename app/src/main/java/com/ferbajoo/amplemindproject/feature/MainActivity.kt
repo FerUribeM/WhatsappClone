@@ -1,13 +1,14 @@
-package com.ferbajoo.amplemindproject
+package com.ferbajoo.amplemindproject.feature
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.ferbajoo.amplemindproject.R
+import com.ferbajoo.amplemindproject.core.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +21,10 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         NavigationUI.setupActionBarWithNavController(
-            this, Navigation.findNavController(this, R.id.nav_host)
+            this, Navigation.findNavController(
+                this,
+                R.id.nav_host
+            )
         )
     }
 
