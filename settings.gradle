@@ -1,0 +1,2 @@
+include Modules.app, Modules.network, Modules.presentation
+rootProject.name='AmplemindProject'

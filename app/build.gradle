@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion Versions.compileSdk
+    buildToolsVersion Versions.buildTools
+    defaultConfig {
+        applicationId ApplicationId.id
+        minSdkVersion 23
+        targetSdkVersion 29
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Releases.versionCode
+        versionName Releases.versionName
+        testInstrumentationRunner Libraries.testRunner
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(Modules.network)
+    implementation project(Modules.presentation)
+
+    implementation Libraries.kotlin
+    implementation SupportLibraries.appcompat
+    implementation Libraries.ktx
+    implementation SupportLibraries.constraintlayout
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation TestLibraries.junit
+    androidTestImplementation TestLibraries.junitExt
+    androidTestImplementation TestLibraries.espresso
+    implementation NavigationLibraries.navigationFragmentLibrary
+    implementation NavigationLibraries.navigationUILibrary
+}
