@@ -11,6 +11,7 @@ fun injectFeature() = loadFeature
 private val loadFeature by lazy {
     loadKoinModules(
         viewModelModules,
+        useCaseModule,
         networkModule,
         handleErrorModule
     )

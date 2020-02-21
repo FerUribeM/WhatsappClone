@@ -2,8 +2,8 @@ package com.ferbajoo.amplemindproject.core.koin
 
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class HomeViewModel(useCase: HomeUseCase) : ViewModel() {
 
-    val mjs = "Text in ViewModel"
+    val mjs = useCase.mgs
 
 }
