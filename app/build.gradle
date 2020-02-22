@@ -6,9 +6,12 @@ apply plugin: 'kotlin-kapt'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
 android {
     compileSdkVersion Versions.compileSdk
     buildToolsVersion Versions.buildTools
+
     defaultConfig {
         applicationId ApplicationId.id
         minSdkVersion 23
@@ -24,6 +27,40 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "beta"
+    productFlavors {
+        dev {
+            dimension "beta"
+            applicationIdSuffix ".dev"
+            versionCode = Releases.versionCode
+            versionName = Releases.versionName + Releases.versionCode
+        }
+        qa {
+            dimension "beta"
+            applicationIdSuffix ".staging"
+            versionCode = Releases.versionCode
+            versionName = Releases.versionName + Releases.versionCode
+        }
+        prod {
+            dimension "beta"
+            versionCode = Releases.versionCode
+            versionName = Releases.versionName + Releases.versionCode
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    androidExtensions {
+        experimental = true
     }
 }
 
