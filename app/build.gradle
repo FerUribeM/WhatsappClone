@@ -75,6 +75,9 @@ dependencies {
     implementation Libraries.koinAndroid
     implementation Libraries.koinViewModel
 
+    implementation 'com.devlomi:circularstatusview:1.0.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
     implementation SupportLibraries.appcompat
     implementation SupportLibraries.constraintlayout
 

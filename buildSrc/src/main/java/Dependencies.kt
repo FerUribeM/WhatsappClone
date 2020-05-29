@@ -1,5 +1,5 @@
 object ApplicationId {
-    val id = "com.ferbajoo.amplemindproject"
+    val id = "com.ferbajoo.whatsappclone"
 }
 
 object Modules {

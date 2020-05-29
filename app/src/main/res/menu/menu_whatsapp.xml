@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+
+    <group
+        android:menuCategory="secondary">
+        <item
+            android:id="@+id/new_group"
+            app:showAsAction="never"
+            android:title="Nuevo grupo"/>
+        <item
+            android:id="@+id/new_difusion"
+            app:showAsAction="never"
+            android:title="Difusion"/>
+        <item
+            android:id="@+id/whatsapp_web"
+            app:showAsAction="never"
+            android:title="Whatsapp web"/>
+        <item
+            android:id="@+id/message"
+            app:showAsAction="never"
+            android:title="Mensaje destacado"/>
+        <item
+            android:id="@+id/settings"
+            app:showAsAction="never"
+            android:title="Ajustes"/>
+    </group>
+
+</menu>

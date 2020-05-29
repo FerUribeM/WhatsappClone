@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.ferbajoo.amplemindproject.feature.HomeFragment"
+        android:name="com.ferbajoo.whatsappclone.feature.HomeFragment"
         android:label="Home"
         tools:layout="@layout/layout_fragment_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/nextFragment"
-        android:name="com.ferbajoo.amplemindproject.feature.NextFragment"
+        android:name="com.ferbajoo.whatsappclone.feature.NextFragment"
         android:label="Siguiente"
         tools:layout="@layout/layout_fragment_next" />
 </navigation>

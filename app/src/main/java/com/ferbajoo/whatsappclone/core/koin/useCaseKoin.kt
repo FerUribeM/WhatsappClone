@@ -1,0 +1,12 @@
+package com.ferbajoo.whatsappclone.core.koin
+
+import org.koin.core.module.Module
+import org.koin.dsl.module
+
+/**
+ * Created by Fernando U on 2020-02-21.
+ */
+
+val useCaseModule: Module = module {
+    factory { HomeUseCase() }
+}
